@@ -2,12 +2,11 @@
   "name": "inv-multi-lang",
   "version": "1.0.0",
   "private": true,
-  "description": "Password-protected multilingual inverter manual portal",
+  "description": "Multilingual webpage for the 150W car power inverter instruction manual",
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "dev": "node --watch server.mjs",
-    "check": "node --test"
+    "dev": "node --watch server.mjs"
   },
   "engines": {
     "node": ">=20"
