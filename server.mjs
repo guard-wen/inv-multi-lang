@@ -3,7 +3,7 @@ import { createServer } from "node:http";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const publicDirectory = fileURLToPath(new URL("./public/", import.meta.url));
+const publicDirectory = fileURLToPath(new URL("./docs/", import.meta.url));
 const port = Number(process.env.PORT || 4173);
 const contentTypes = {
   ".css": "text/css; charset=utf-8",

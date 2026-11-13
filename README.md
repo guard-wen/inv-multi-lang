@@ -16,7 +16,7 @@ npm start
 
 ## 替换说明书图片
 
-将最终图片放入 `public/assets/manuals/`，文件名如下：
+将最终图片放入 `docs/assets/manuals/`，文件名如下：
 
 | 语言 | 文件名 |
 | --- | --- |
@@ -30,6 +30,6 @@ npm start
 
 ## 页面文案与图片路径
 
-在 `public/app.js` 的 `manuals` 配置中修改各语言标题、说明和图片路径。
+在 `docs/app.js` 的 `manuals` 配置中修改各语言说明和图片路径。
 
 本项目是纯静态网页，可直接由 GitHub Pages 发布。
