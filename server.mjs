@@ -9,6 +9,8 @@ const contentTypes = {
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
   ".ico": "image/x-icon",
+  ".jpeg": "image/jpeg",
+  ".jpg": "image/jpeg",
   ".js": "text/javascript; charset=utf-8",
   ".md": "text/plain; charset=utf-8",
   ".png": "image/png",
@@ -33,9 +35,13 @@ const server = createServer(async (request, response) => {
     const info = await stat(filePath);
     if (!info.isFile()) throw Object.assign(new Error("Not a file"), { code: "ENOENT" });
     const content = await readFile(filePath);
+    const extension = extname(filePath);
+    const cacheControl = [".css", ".html", ".js"].includes(extension)
+      ? "no-cache"
+      : "public, max-age=86400";
     response.writeHead(200, {
-      "Content-Type": contentTypes[extname(filePath)] || "application/octet-stream",
-      "Cache-Control": extname(filePath) === ".html" ? "no-cache" : "public, max-age=3600",
+      "Content-Type": contentTypes[extension] || "application/octet-stream",
+      "Cache-Control": cacheControl,
       "X-Content-Type-Options": "nosniff"
     });
     response.end(content);

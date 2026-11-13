@@ -3,33 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f3efe6">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="150W Car Power Inverter Instruction Manual">
     <title>150W Car Power Inverter Instruction Manual</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+    <link rel="icon" href="assets/images/pofet-logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.minimal.css?v=8">
+    <script src="app.mobile.js?v=8" defer></script>
   </head>
   <body>
     <div class="top-rule" aria-hidden="true"></div>
 
     <header class="site-header">
       <a class="brand" href="./" aria-label="Manual home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 36 36">
-            <path d="M8 24.5 14.2 8h7.6L27.9 24.5h-5.8l-1.3-4.2h-6.2l-1.3 4.2H8Z"/>
-            <path class="brand-mark-cut" d="m15.8 15.6 1.9 5h-3.9l2-5Z"/>
-          </svg>
-        </span>
-        <span class="brand-copy">
-          <strong>PowerDocs</strong>
-          <small>150W SERIES</small>
-        </span>
+        <img class="brand-logo" src="assets/images/pofet-logo.jpg" alt="POFET">
+        <span class="brand-subtitle">150W SERIES</span>
       </a>
       <div class="document-state">
         <span class="state-dot"></span>
-        <span>DIGITAL MANUAL</span>
-        <span class="state-number">01 / 01</span>
+        <span>150 W</span>
       </div>
     </header>
 
@@ -57,10 +48,13 @@
         <div class="select-wrap">
           <select id="language-select" aria-labelledby="language-label">
             <option value="en" selected>English</option>
-            <option value="zh-CN">简体中文</option>
-            <option value="zh-TW">繁體中文</option>
             <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="fr">Français</option>
             <option value="es">Español</option>
+            <option value="pt">Português</option>
+            <option value="hi">हिन्दी</option>
           </select>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9.5 5 5 5-5"/></svg>
         </div>
@@ -75,7 +69,16 @@
         </figcaption>
 
         <div class="image-stage">
-          <img id="manual-image" alt="" hidden>
+          <button class="manual-image-trigger" id="manual-image-trigger" type="button" aria-haspopup="dialog" hidden>
+            <img id="manual-image" alt="">
+            <span class="image-zoom-cue" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/>
+                <path d="m9 9-5-5M15 15l5 5M15 9l5-5M9 15l-5 5"/>
+              </svg>
+              <span>Full screen</span>
+            </span>
+          </button>
 
           <div class="image-placeholder" id="image-placeholder">
             <span class="corner corner--tl" aria-hidden="true"></span>
@@ -126,6 +129,18 @@
       <span>© 2026 POWERDOCS</span>
       <span>150W CAR POWER INVERTER · DOCUMENTATION</span>
     </footer>
+
+    <dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title">
+      <div class="image-viewer-bar">
+        <span id="image-viewer-title">Manual image</span>
+        <button class="image-viewer-close" id="image-viewer-close" type="button" aria-label="Close full screen image">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="image-viewer-stage" id="image-viewer-stage">
+        <img id="image-viewer-image" alt="">
+      </div>
+    </dialog>
 
     <noscript>
       <p class="noscript-note">Please enable JavaScript to switch manual languages.</p>
