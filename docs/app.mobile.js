@@ -25,6 +25,19 @@ const manuals = {
     placeholderHint: "此处将显示简体中文版说明书图片。",
     image: "assets/manuals/150w-zh-CN.jpg"
   },
+  "zh-TW": {
+    htmlLang: "zh-Hant",
+    title: "150W 車載逆變器<br>使用說明書",
+    headingNote: "選擇語言，查看對應版本的說明書。",
+    selectorLabel: "說明書語言",
+    selectorHint: "Manual language",
+    code: "繁",
+    caption: "繁體中文版",
+    edition: "繁體中文版",
+    placeholderTitle: "說明書圖片預留位",
+    placeholderHint: "此處將顯示繁體中文版說明書圖片。",
+    image: "assets/manuals/150w-zh-TW.jpg"
+  },
   de: {
     htmlLang: "de",
     title: "150 W Kfz-Wechselrichter<br>Bedienungsanleitung",
@@ -115,6 +128,19 @@ const manuals = {
     placeholderTitle: "मैनुअल छवि का स्थान",
     placeholderHint: "यहाँ हिन्दी मैनुअल की छवि दिखाई देगी।",
     image: "assets/manuals/150w-hi.jpg"
+  },
+  ru: {
+    htmlLang: "ru",
+    title: "Автомобильный инвертор 150 Вт<br>Руководство по эксплуатации",
+    headingNote: "Выберите язык, чтобы открыть соответствующее руководство.",
+    selectorLabel: "Язык руководства",
+    selectorHint: "Manual language",
+    code: "RU",
+    caption: "Издание на русском языке",
+    edition: "ИЗДАНИЕ НА РУССКОМ ЯЗЫКЕ",
+    placeholderTitle: "Место для изображения руководства",
+    placeholderHint: "Здесь будет показано изображение руководства на русском языке.",
+    image: "assets/manuals/150w-ru.jpg"
   }
 };
 
