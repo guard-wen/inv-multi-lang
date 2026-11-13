@@ -10,8 +10,20 @@ const manuals = {
     edition: "ENGLISH EDITION",
     placeholderTitle: "Manual image placeholder",
     placeholderHint: "Replace this area with the English manual image.",
-    slotNote: "Reserved space for the instruction manual image",
     image: "assets/manuals/150w-en.jpg"
+  },
+  "zh-CN": {
+    htmlLang: "zh-CN",
+    title: "150W 车载逆变器<br>使用说明书",
+    headingNote: "选择语言，查看对应版本的说明书。",
+    selectorLabel: "说明书语言",
+    selectorHint: "Manual language",
+    code: "简",
+    caption: "简体中文版",
+    edition: "简体中文版",
+    placeholderTitle: "说明书图片预留位",
+    placeholderHint: "此处将显示简体中文版说明书图片。",
+    image: "assets/manuals/150w-zh-CN.jpg"
   },
   de: {
     htmlLang: "de",
@@ -24,7 +36,6 @@ const manuals = {
     edition: "DEUTSCHE AUSGABE",
     placeholderTitle: "Platzhalter für Anleitungsbild",
     placeholderHint: "Hier wird das Bild der deutschen Anleitung eingefügt.",
-    slotNote: "Reservierter Bereich für das Anleitungsbild",
     image: "assets/manuals/150w-de.jpg"
   },
   it: {
@@ -38,7 +49,6 @@ const manuals = {
     edition: "EDIZIONE ITALIANA",
     placeholderTitle: "Segnaposto immagine del manuale",
     placeholderHint: "Qui verrà visualizzata l'immagine del manuale in italiano.",
-    slotNote: "Spazio riservato per l'immagine del manuale",
     image: "assets/manuals/150w-it.jpg"
   },
   ja: {
@@ -52,7 +62,6 @@ const manuals = {
     edition: "日本語版",
     placeholderTitle: "説明書画像のプレースホルダー",
     placeholderHint: "ここに日本語版説明書の画像が表示されます。",
-    slotNote: "説明書画像用のスペース",
     image: "assets/manuals/150w-ja.jpg"
   },
   fr: {
@@ -66,7 +75,6 @@ const manuals = {
     edition: "ÉDITION FRANÇAISE",
     placeholderTitle: "Emplacement pour l'image du manuel",
     placeholderHint: "L'image du manuel en français s'affichera ici.",
-    slotNote: "Espace réservé à l'image du manuel",
     image: "assets/manuals/150w-fr.jpg"
   },
   es: {
@@ -80,7 +88,6 @@ const manuals = {
     edition: "EDICIÓN EN ESPAÑOL",
     placeholderTitle: "Espacio para la imagen del manual",
     placeholderHint: "Aquí se mostrará la imagen del manual en español.",
-    slotNote: "Espacio reservado para la imagen del manual",
     image: "assets/manuals/150w-es.jpg"
   },
   pt: {
@@ -94,7 +101,6 @@ const manuals = {
     edition: "EDIÇÃO EM PORTUGUÊS",
     placeholderTitle: "Espaço para a imagem do manual",
     placeholderHint: "A imagem do manual em português será exibida aqui.",
-    slotNote: "Espaço reservado para a imagem do manual",
     image: "assets/manuals/150w-pt.jpg"
   },
   hi: {
@@ -108,7 +114,6 @@ const manuals = {
     edition: "हिन्दी संस्करण",
     placeholderTitle: "मैनुअल छवि का स्थान",
     placeholderHint: "यहाँ हिन्दी मैनुअल की छवि दिखाई देगी।",
-    slotNote: "मैनुअल छवि के लिए आरक्षित स्थान",
     image: "assets/manuals/150w-hi.jpg"
   }
 };
@@ -124,7 +129,6 @@ const elements = {
   edition: document.querySelector("#cover-edition"),
   placeholderTitle: document.querySelector("#placeholder-title"),
   placeholderHint: document.querySelector("#placeholder-hint"),
-  slotNote: document.querySelector("#slot-note"),
   imageTrigger: document.querySelector("#manual-image-trigger"),
   image: document.querySelector("#manual-image"),
   placeholder: document.querySelector("#image-placeholder"),
@@ -157,7 +161,6 @@ function updateLanguage(language, updateUrl = true) {
   elements.edition.textContent = manual.edition;
   elements.placeholderTitle.textContent = manual.placeholderTitle;
   elements.placeholderHint.textContent = manual.placeholderHint;
-  elements.slotNote.textContent = manual.slotNote;
   elements.placeholder.lang = manual.htmlLang;
   elements.image.alt = manual.caption;
   elements.imageTrigger.setAttribute("aria-label", `Open ${manual.caption} full screen`);

@@ -2,7 +2,7 @@
 
 “150W Car Power Inverter Instruction Manual”多语言网页。
 
-页面默认显示英语，标题、标题说明和说明书图片会随语言选项同步切换。除英语图片尚待提供外，其余语言图片来自 `public/assets/`。
+页面默认显示英语，标题、标题说明和说明书图片会随语言选项同步切换。语言图片来自 `public/assets/lang/`。
 
 ## 本地预览
 
@@ -20,7 +20,8 @@ npm start
 
 | 语言 | 文件名 |
 | --- | --- |
-| 英语 | `150w-en.jpg`（待提供） |
+| 英语 | `150w-en.jpg` |
+| 简体中文 | `150w-zh-CN.jpg` |
 | 德语 | `150w-de.jpg` |
 | 意大利语 | `150w-it.jpg` |
 | 日语 | `150w-ja.jpg` |

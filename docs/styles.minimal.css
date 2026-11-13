@@ -691,32 +691,6 @@ html:has(.image-viewer[open]) {
   line-height: 1.55;
 }
 
-.slot-note {
-  display: flex;
-  min-height: 42px;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  margin: 0;
-  padding: 0 13px;
-  border-top: 1px solid var(--line);
-  color: #929292;
-  font-size: 7px;
-  text-align: center;
-}
-
-.slot-note > span:first-child {
-  display: grid;
-  width: 14px;
-  height: 14px;
-  flex: 0 0 auto;
-  place-items: center;
-  border: 1px solid #d7d7d7;
-  border-radius: 50%;
-  color: var(--green);
-  font-size: 9px;
-}
-
 .site-footer {
   display: flex;
   width: calc(100% - 36px);
